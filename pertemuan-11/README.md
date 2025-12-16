@@ -17,4 +17,5 @@ Belajar sebagai berikut:<br>
 <li>ambil data post</li>
 <li>mengisi validasi</li>
 <li>insert data tbl_tamu</li>
+<li>menambahkan kolom created at<li>
 </ol>

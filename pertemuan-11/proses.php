@@ -1,19 +1,29 @@
 <?php
 session_start();
 
+require 'koneksi.php';
+require_once __DIR__ . '/fungsi.php';
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   $_SESSION['flash_error'] = 'Akses tidak valid.';
   redirect_ke('index.php#contact');
+  exit;
 }
 
 $nama = bersihkan($_POST['txtNama'] ?? '');
 $email = bersihkan($_POST['txtEmail'] ?? '');
 $pesan = bersihkan($_POST['txtPesan'] ?? '');
+$captcha = $_POST['captcha'] ?? '';
 
 $errors = [];
+if ($captcha !== '5') {
+  $errors[] = 'Captcha salah. Silahkan coba lagi.';
+}
 
 if ($nama === '') {
   $errors[] = 'Nama wajib diisi.';
+} elseif (strlen(string: $nama) < 3) {
+  $errors[] = 'Nama minimal 3 karakter';
 }
 
 if ($email === '') {
@@ -24,9 +34,11 @@ if ($email === '') {
 
 if ($pesan === '') {
   $errors[] = 'Pesan wajib diisi.';
+} elseif (strlen(string: $pesan) < 10) {
+  $errors[] = 'Pesan minimal 10 karakter.';
 }
 
-if (!empty(errors)) {
+if (!empty($errors)) {
   $_SESSION ['old'] = [
     'nama'  => $nama,
     'email'  => $email,
@@ -36,6 +48,7 @@ if (!empty(errors)) {
 
   $_SESSION['flash_error'] = implode('<br>', $errors);
   redirect_ke('index.php#contact');
+  exit;
 }
 
 $sql = "INSERT INTO tbl_tamu (cnama, cemail, cpesan) VALUES (?, ?, ?)";
@@ -50,8 +63,9 @@ mysqli_stmt_bind_param($stmt, "sss", $nama, $email, $pesan);
 
 if (mysqli_stmt_execute($stmt)) {
   unset($_SESSION['old']);
-  $_SESSION['flash_sukses'] = 'Terima kasih, data anda sudah tersimpan.'
+  $_SESSION['flash_sukses'] = 'Terima kasih, data anda sudah tersimpan.';
   redirect_ke('index.php#contact');
+  exit;
 } else {
   $_SESSION['old'] = [
     'nama'  => $nama,
@@ -85,4 +99,4 @@ $arrBiodata = [
 ];
 $_SESSION["biodata"] = $arrBiodata;
 
-header("location: index.php#about");
+
