@@ -17,15 +17,19 @@ $no = 1;
       <th>Pesan</th>
 </tr>
 
-<?php $no = 1; ?>
-<?php while ($row = mysqli_fetch_assoc($query)) : ?>
-<tr>
-  <td><?= $no++; ?></td>
-  <td><?= $row['cnama']; ?></td>
-  <td><?= $row['cemail']; ?></td>
-  <td><?= $row['cpesan']; ?></td>
-  <td>
+<?php while ($row = mysqli_fetch_assoc($q)): ?>
+  <tr>
+    <td><?= $no++; ?></td>
+    <td><?= $row['cid']; ?></td>
+    <td><?= $row['cnama']; ?></td>
+   <td><?= $row['cemail']; ?></td>
+   <td><?= $row['cpesan']; ?></td>
+   <td>
     <?= date('d-m-Y H:i:s', strtotime($row['created_at'])); ?>
   </td>
 </tr>
+
+
+
 <?php endwhile; ?>
+</table>
