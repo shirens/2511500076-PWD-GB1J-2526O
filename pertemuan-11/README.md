@@ -18,4 +18,5 @@ Belajar sebagai berikut:<br>
 <li>mengisi validasi</li>
 <li>insert data tbl_tamu</li>
 <li>menambahkan kolom created at<li>
+<li>menymipan file localhost.sql<li>
 </ol>
