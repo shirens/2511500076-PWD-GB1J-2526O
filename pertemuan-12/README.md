@@ -11,4 +11,5 @@ Belajar sebagai berikut:<br>
 <li>mengcopy file pertemuan-11 ke pertemuan 12</li>
 <li>menambahkan kolom aksi pada read php</li>
 <li>membuat file edit.php</li>
+<li>menambahkah flash error dan sukses di read.php</li>
 </ol>
