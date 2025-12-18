@@ -12,4 +12,5 @@ Belajar sebagai berikut:<br>
 <li>menambahkan kolom aksi pada read php</li>
 <li>membuat file edit.php</li>
 <li>menambahkah flash error dan sukses di read.php</li>
+<li>menmabhakan file baru edit.php</li>
 </ol>
