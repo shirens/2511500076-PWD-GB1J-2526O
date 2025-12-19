@@ -14,4 +14,6 @@ Belajar sebagai berikut:<br>
 <li>menambahkah flash error dan sukses di read.php</li>
 <li>menmabhakan file baru edit.php</li>
 <li>mengisi file edit.php</li>
+<li>membuat file baru proses_update.php</li>
+<li>mengisi file proses_update.php</li>
 </ol>
