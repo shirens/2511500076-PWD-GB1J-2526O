@@ -13,4 +13,5 @@ Belajar sebagai berikut:<br>
 <li>membuat file edit.php</li>
 <li>menambahkah flash error dan sukses di read.php</li>
 <li>menmabhakan file baru edit.php</li>
+<li>mengisi file edit.php</li>
 </ol>
