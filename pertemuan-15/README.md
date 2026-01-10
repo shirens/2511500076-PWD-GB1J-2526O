@@ -21,4 +21,5 @@ biodata.php</li>
 biodata.php</li>
 <li>menambahkan isi kodingan di edit_biodata.php agar bisa di edit</li>
 <li>menambahkan isi kodingan proses_update_biodata.php agar ketika di edit dapat diproses</li>
+<li>menambahkan isi kodingan proses_delete_biodata.php agar bisa menghapus data</li>
 </ol>
