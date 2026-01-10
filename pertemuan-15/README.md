@@ -15,4 +15,6 @@ Try out UAS:<br>
 <li>update proses.php agar tbl_julio bisa kebaca</li>
 <li>menambahkan delete dan edit di tbl_julio</li>
 <li>membuat file baru edit_biodata.php</li>
+<li>membuat file baru proses_update_
+biodata.php</li>
 </ol>
