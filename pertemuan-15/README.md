@@ -19,4 +19,5 @@ Try out UAS:<br>
 biodata.php</li>
 <li>membuat file baru proses_delete_
 biodata.php</li>
+<li>menambahkan isi kodingan di edit_biodata.php agar bisa di edit</li>
 </ol>
