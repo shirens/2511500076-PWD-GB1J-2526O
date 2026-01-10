@@ -11,4 +11,6 @@ Try out UAS:<br>
 <li>mendownload file rar di elearning dan dipindahkan ke pertemuan 15</li>
 <li>membuat tabel baru di php myadmin</li>
 <li>menambahkan file baru proses_simpan.php</li>
+<li>membuat file baru julio.php untuk membaca mysql</li>
+<li>update proses.php agar tbl_julio bisa kebaca</li>
 </ol>
