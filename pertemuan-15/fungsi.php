@@ -17,6 +17,7 @@ function tidakKosong($str)
 
 function formatTanggal($tgl)
 {
+  if ($tgl == '' || $tgl == null) return null;
   return date("d M Y H:i:s", strtotime($tgl));
 }
 
