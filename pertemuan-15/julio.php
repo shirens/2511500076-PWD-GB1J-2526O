@@ -50,6 +50,14 @@
   <?php while ($row = mysqli_fetch_assoc($q)): ?>
     <tr>
       <td><?= $i++ ?></td>
+      <td>
+        <a href="edit_biodata.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
+
+        <a 
+        onclick="return confirm('Hapus data <?= htmlspecialchars($row['Nama_Lengkap']); ?> ?')"
+        href="proses_delete_biodata.php?cid=<?= (int)$row['cid']; ?>">
+        Delete</a>
+      </td>
           <td><?= htmlspecialchars($row['NIM']); ?></td>
       <td><?= htmlspecialchars($row['Nama_Lengkap']); ?></td>
       <td><?= htmlspecialchars($row['Tempat_Lahir']); ?></td>
