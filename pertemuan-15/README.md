@@ -10,4 +10,5 @@ Try out UAS:<br>
 <ol>
 <li>mendownload file rar di elearning dan dipindahkan ke pertemuan 15</li>
 <li>membuat tabel baru di php myadmin</li>
+<li>menambahkan file baru proses_simpan.php</li>
 </ol>
