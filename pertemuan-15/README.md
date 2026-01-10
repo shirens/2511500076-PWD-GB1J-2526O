@@ -23,4 +23,5 @@ biodata.php</li>
 <li>menambahkan isi kodingan proses_update_biodata.php agar ketika di edit dapat diproses</li>
 <li>menambahkan isi kodingan proses_delete_biodata.php agar bisa menghapus data</li>
 <li>merapikan semua kodingan agar terlihat rapi</li>
+<li>terakhir coba di web untuk kirim, edit dan delete database nya kalau sudah berhasil maka sudah selesai</li>
 </ol>
