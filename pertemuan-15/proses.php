@@ -62,6 +62,9 @@ if (isset($_POST['txtNim'])) {
   mysqli_stmt_close($stmt);
 
   $_SESSION['flash_biodata'] = "Biodata berhasil disimpan.";
+  if ($query) {
+  $_SESSION['sukses'] = 'Biodata berhasil disimpan / diperbarui'. mysqli_sukses($conn);
+} 
   header("Location: index.php#biodata");
   exit;
 }

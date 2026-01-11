@@ -40,6 +40,21 @@ require_once __DIR__ . '/fungsi.php';
 
     <section id="biodata">
       <h2>Biodata Sederhana Mahasiswa</h2>
+
+      <?php if (isset($_SESSION['flash_biodata'])): ?>
+    <div class="alert alert-success">
+      <?= $_SESSION['flash_biodata']; ?>
+    </div>
+    <?php unset($_SESSION['flash_biodata']); ?>
+  <?php endif; ?>
+
+  <?php if (isset($_SESSION['flash_biodata_error'])): ?>
+    <div class="alert alert-danger">
+      <?= $_SESSION['flash_biodata_error']; ?>
+    </div>
+    <?php unset($_SESSION['flash_biodata_error']); ?>
+  <?php endif; ?>
+
       <form action="proses.php" method="POST">
 
         <label for="txtNim"><span>NIM:</span>

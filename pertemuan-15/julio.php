@@ -34,6 +34,7 @@
 <table border="1" cellpadding="8" cellspacing="0">
   <tr>
     <th>ID</th>
+    <th>Aksi</th>
     <th>NIM</th>
     <th>Nama Lengkap</th>
     <th>Tempat Lahir</th>
