@@ -12,4 +12,5 @@ Try out UAS:<br>
 <li>download dan ekstrak file uas ke pertemuan 16</li>
 <li>membuat file baru untuk pembaca shirens.php</li>
 <li>copy file read.php ke shirens.php</li>
+<li>modifikasi file shirens.php</li>
 </ol>
