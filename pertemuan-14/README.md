@@ -16,4 +16,5 @@ Try out UAS:<br>
 <li>membuat file baru proses_biodata.php</li>
 <li>mengisi file proses_biodata.php agar ketika dikirim dia bisa di proses ke shirens.php</li>
 <li>membuat file baru edit_biodata.php untuk mengedit database</li>
+<li>mengisi file edit_biodata.php</li>
 </ol>
