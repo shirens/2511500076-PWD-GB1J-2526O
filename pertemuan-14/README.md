@@ -9,4 +9,5 @@ Kelompok: GB1J<br>
 Try out UAS:<br>
 <ol>
 <li>membuat tabel baru di mysql</li>
+<li>download dan ekstrak file uas ke pertemuan 16</li>
 </ol>
