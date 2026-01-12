@@ -11,4 +11,5 @@ Try out UAS:<br>
 <li>membuat tabel baru di mysql</li>
 <li>download dan ekstrak file uas ke pertemuan 16</li>
 <li>membuat file baru untuk pembaca shirens.php</li>
+<li>copy file read.php ke shirens.php</li>
 </ol>
