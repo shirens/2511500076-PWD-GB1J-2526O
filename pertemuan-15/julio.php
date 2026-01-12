@@ -11,9 +11,8 @@
 ?>
 
 <?php
-  $flash_sukses = $_SESSION['flash_sukses'] ?? ''; #jika query sukses
-  $flash_error  = $_SESSION['flash_error'] ?? ''; #jika ada error
-  #bersihkan session ini
+  $flash_sukses = $_SESSION['flash_sukses'] ?? ''; 
+  $flash_error  = $_SESSION['flash_error'] ?? ''; 
   unset($_SESSION['flash_sukses'], $_SESSION['flash_error']); 
 ?>
 
@@ -59,7 +58,7 @@
         href="proses_delete_biodata.php?cid=<?= (int)$row['cid']; ?>">
         Delete</a>
       </td>
-          <td><?= htmlspecialchars($row['NIM']); ?></td>
+      <td><?= htmlspecialchars($row['NIM']); ?></td>
       <td><?= htmlspecialchars($row['Nama_Lengkap']); ?></td>
       <td><?= htmlspecialchars($row['Tempat_Lahir']); ?></td>
       <td><?= nl2br(htmlspecialchars($row['Tanggal_Lahir'])); ?></td>
