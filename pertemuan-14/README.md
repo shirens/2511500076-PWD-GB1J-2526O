@@ -20,4 +20,5 @@ Try out UAS:<br>
 <li>membuat file baru proses_update_biodata.php</li>
 <li>mengisi file proses_update_biodata.php</li>
 <li>membuat file baru proses_delete_biodata.php</li>
+<li>mengisi file proses_delete_biodata.php</li>
 </ol>
