@@ -21,4 +21,5 @@ Try out UAS:<br>
 <li>mengisi file proses_update_biodata.php</li>
 <li>membuat file baru proses_delete_biodata.php</li>
 <li>mengisi file proses_delete_biodata.php</li>
+<li>cek di website apakah crud nya berhasil semua dari create, read, update, delete nya berhasil semua ketika semuanya sudah berhasil maka kita sudah berhasil membuat web sederhana crud</li>
 </ol>

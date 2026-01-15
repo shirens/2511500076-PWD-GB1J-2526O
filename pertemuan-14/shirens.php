@@ -54,20 +54,20 @@
         <a href="edit_biodata.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
 
         <a 
-        onclick="return confirm('Hapus data <?= htmlspecialchars($row['Nama_Lengkap']); ?> ?')"
+        onclick="return confirm('Hapus data <?= htmlspecialchars($row['nama_lengkap']); ?> ?')"
         href="proses_delete_biodata.php?cid=<?= (int)$row['cid']; ?>">
         Delete</a>
       </td>
-      <td><?= htmlspecialchars($row['nim']); ?></td>
-      <td><?= htmlspecialchars($row['nama_lengkap']); ?></td>
-      <td><?= htmlspecialchars($row['tempat_lahir']); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['tanggal_lahir'])); ?></td>
-      <td><?= htmlspecialchars($row['hobi']); ?></td>
-      <td><?= htmlspecialchars($row['pasangan']); ?></td>
-      <td><?= htmlspecialchars($row['pekerjaan']); ?></td>
-      <td><?= htmlspecialchars($row['nama_ortu']); ?></td>
-      <td><?= htmlspecialchars($row['nama_kakak']); ?></td>
-      <td><?= htmlspecialchars($row['nama_adik']); ?></td>
+        <td><?= htmlspecialchars($row['nim'] ?? ''); ?></td>
+        <td><?= htmlspecialchars($row['nama_lengkap'] ?? ''); ?></td>
+        <td><?= htmlspecialchars($row['tempat_lahir'] ?? ''); ?></td>
+        <td><?= htmlspecialchars($row['tanggal_lahir'] ?? ''); ?></td>
+        <td><?= htmlspecialchars($row['hobi'] ?? ''); ?></td>
+        <td><?= htmlspecialchars($row['pasangan'] ?? ''); ?></td>
+        <td><?= htmlspecialchars($row['pekerjaan'] ?? ''); ?></td>
+        <td><?= htmlspecialchars($row['nama_ortu'] ?? ''); ?></td>
+        <td><?= htmlspecialchars($row['nama_kakak'] ?? ''); ?></td>
+        <td><?= htmlspecialchars($row['nama_adik'] ?? ''); ?></td>
       <td><?= formatTanggal(htmlspecialchars($row['created_at'])); ?></td>
     </tr>
   <?php endwhile; ?>
