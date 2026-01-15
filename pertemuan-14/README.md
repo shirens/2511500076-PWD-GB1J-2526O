@@ -10,4 +10,5 @@ Try out UAS:<br>
 <ol>
 <li>mendownload file rar di elearning dan dipindahkan ke pertemuan 14</li>
 <li>membuat table baru tbl_shirens di mysql</li>
+<li>membuat file baru shirens.php sebagai pembaca</li>
 </ol>
