@@ -9,5 +9,5 @@ Kelompok: GB1J<br>
 Try out UAS:<br>
 <ol>
 <li>mendownload file rar di elearning dan dipindahkan ke pertemuan 14</li>
-<li></li>
+<li>membuat table baru tbl_shirens di mysql</li>
 </ol>
