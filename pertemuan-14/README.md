@@ -12,4 +12,5 @@ Try out UAS:<br>
 <li>membuat table baru tbl_shirens di mysql</li>
 <li>membuat file baru shirens.php sebagai pembaca</li>
 <li>copy file read.php ke shirens.php</li>
+<li>modifikasi file shirens.php<li>
 </ol>
