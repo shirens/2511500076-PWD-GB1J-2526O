@@ -10,4 +10,5 @@ Try out UAS:<br>
 <ol>
 <li>mengestrak file rar dari elearning dan copy ke pertemuan 16</li>
 <li>membuat tabel baru di phpmyadmin</li>
+<li>membuat file pembaca yang baru shirens.php</li>
 </ol>
