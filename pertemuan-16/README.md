@@ -9,4 +9,5 @@ Kelompok: GB1J<br>
 Melaksanakan UAS:<br>
 <ol>
 <li>membuat tabel baru di php my admin tbl_shirens</li>
+<li>mengekstrak file rar di elearning dan copy ke pertemuan 16</li>
 </ol>
