@@ -17,4 +17,5 @@ Melaksanakan UAS:<br>
 <li>copy file proses.php ke proses_biodata.php</li>
 <li>modifikasi file proses_biodata.php</li>
 <li>menambahkan tombol delete dan edit </li>
+<li>membuat file baru edit_biodata.php</li>
 </ol>
