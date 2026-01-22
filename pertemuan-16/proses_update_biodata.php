@@ -9,53 +9,53 @@ $cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
 
 if (!$cid) {
   $_SESSION['flash_error'] = 'Akses tidak valid.';
-  redirect_ke('julio.php');
+  redirect_ke('shirens.php');
 }
 
-$nim        = trim($_POST['NIM'] ?? '');
-$nama       = trim($_POST['Nama_Lengkap'] ?? '');
-$tempat     = trim($_POST['Tempat_Lahir'] ?? '');
-$tanggal    = $_POST['Tanggal_Lahir'] ?? '';
-$hobi       = trim($_POST['Hobi'] ?? '');
-$pasangan   = trim($_POST['Pasangan'] ?? '');
-$pekerjaan  = trim($_POST['Pekerjaan'] ?? '');
-$ortu       = trim($_POST['Nama_Ortu'] ?? '');
-$kakak      = trim($_POST['Nama_Kakak'] ?? '');
-$adik       = trim($_POST['Nama_Adik'] ?? '');
+$kode        = trim($_POST['kode_pengunjung'] ?? '');
+$nama       = trim($_POST['nama_pengunjung'] ?? '');
+$alamat     = trim($_POST['alamat_pengunjung'] ?? '');
+$tanggal    = $_POST['tanggal_kunjungan'] ?? '';
+$hobi       = trim($_POST['hobi'] ?? '');
+$asal       = trim($_POST['asal_slta'] ?? '');
+$pekerjaan  = trim($_POST['pekerjaan'] ?? '');
+$ortu       = trim($_POST['nama_ortu'] ?? '');
+$pacar      = trim($_POST['nama_pacar'] ?? '');
+$mantan     = trim($_POST['nama_mantan'] ?? '');
 
 $stmt = mysqli_prepare($conn, "
-  UPDATE tbl_julio SET
-    NIM = ?,
-    Nama_Lengkap = ?,
-    Tempat_Lahir = ?,
-    Tanggal_Lahir = ?,
-    Hobi = ?,
-    Pasangan = ?,
-    Pekerjaan = ?,
-    Nama_Ortu = ?,
-    Nama_Kakak = ?,
-    Nama_Adik = ?
+  UPDATE tbl_shirens SET
+    kode_pengunjung = ?,
+    nama_pengunjung = ?,
+    alamat_pengunjung = ?,
+    tanggal_kunjungan = ?,
+    hobi = ?,
+    asal_slta = ?,
+    pekerjaan = ?,
+    nama_ortu = ?,
+    nama_pacar = ?,
+    nama_mantan = ?
   WHERE cid = ?
 ");
 
 if (!$stmt) {
   $_SESSION['flash_error'] = 'Query gagal disiapkan.';
-  redirect_ke('julio.php');
+  redirect_ke('shirens.php');
 }
 
 mysqli_stmt_bind_param(
   $stmt,
   "ssssssssssi",
-  $nim,
+  $kode,
   $nama,
-  $tempat,
+  $alamat,
   $tanggal,
   $hobi,
-  $pasangan,
+  $asal,
   $pekerjaan,
   $ortu,
-  $kakak,
-  $adik,
+  $pacar,
+  $mantan,
   $cid
 );
 
@@ -67,4 +67,4 @@ if (mysqli_stmt_execute($stmt)) {
 
 mysqli_stmt_close($stmt);
 
-redirect_ke('julio.php');
+redirect_ke('shirens.php');
