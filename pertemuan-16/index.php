@@ -55,7 +55,7 @@ require_once __DIR__ . '/fungsi.php';
         </label>
 
         <label for="txtTglKunjungan"><span>Tanggal Kunjungan:</span>
-          <input type="text" id="txtTglKunjungan" name="txtTglKunjungan" placeholder="Masukkan Tanggal Kunjungan" required>
+          <input type="date" id="txtTglKunjungan" name="txtTglKunjungan" placeholder="Masukkan Tanggal Kunjungan" required>
         </label>
 
         <label for="txtHobi"><span>Hobi:</span>
