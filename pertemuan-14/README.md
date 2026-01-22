@@ -16,4 +16,5 @@ Try out UAS:<br>
 <li>membuat file proses baru proses_biodata.php</li>
 <li>copy file proses.php ke proses_biodata.php</li>
 <li>modifikasi file proses_biodata.php</li>
+<li>menambahkan tombol edit dan delete di shirens.php</li>
 </ol>
