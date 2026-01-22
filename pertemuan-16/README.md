@@ -11,4 +11,5 @@ Melaksanakan UAS:<br>
 <li>membuat tabel baru di php my admin tbl_shirens</li>
 <li>mengekstrak file rar di elearning dan copy ke pertemuan 16</li>
 <li>membuat file baru shirens.php sebagai file pembaca</li>
+<li>salin file read.php ke shirens.php</li>
 </ol>
