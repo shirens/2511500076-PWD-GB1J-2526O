@@ -19,4 +19,5 @@ Try out UAS:<br>
 <li>menambhakan tombol edit dan delete di shirens.php</li>
 <li>membuat file baru edit_biodata.php</li>
 <li>modifikasi file edit_biodata.php</li>
+<li>membuat file baru proses_update_biodata.php</li>
 </ol>
