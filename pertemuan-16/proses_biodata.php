@@ -3,56 +3,56 @@ session_start();
 require __DIR__ . '/koneksi.php';
 require_once __DIR__ . '/fungsi.php';
 
-if (isset($_POST['txtNim'])) {
+if (isset($_POST['txtKodePen'])) {
 
-  $nim       = bersihkan($_POST['txtNim'] ?? '');
-  $nama      = bersihkan($_POST['txtNmLengkap'] ?? '');
-  $tempat    = bersihkan($_POST['txtT4Lhr'] ?? '');
-  $tgl_input = $_POST['txtTglLhr'] ?? '';
+  $kode       = bersihkan($_POST['txtKodePen'] ?? '');
+  $nama      = bersihkan($_POST['txtNmPengunjung'] ?? '');
+  $alamat    = bersihkan($_POST['txtAlRmh'] ?? '');
+  $tgl_input = $_POST['txtTglKunjungan'] ?? '';
   $hobi      = bersihkan($_POST['txtHobi'] ?? '');
-  $pasangan  = bersihkan($_POST['txtPasangan'] ?? '');
+  $asal  = bersihkan($_POST['txtAsalSMA'] ?? '');
   $pekerjaan = bersihkan($_POST['txtKerja'] ?? '');
   $ortu      = bersihkan($_POST['txtNmOrtu'] ?? '');
-  $kakak     = bersihkan($_POST['txtNmKakak'] ?? '');
-  $adik      = bersihkan($_POST['txtNmAdik'] ?? '');
+  $pacar     = bersihkan($_POST['txtNmPacar'] ?? '');
+  $mantan     = bersihkan($_POST['txtNmMantan'] ?? '');
 
   if ($nim === '' || $nama === '') {
-    $_SESSION['flash_biodata_error'] = "NIM dan Nama Lengkap wajib diisi.";
+    $_SESSION['flash_biodata_error'] = "Kode Pengunjung dan Nama Pengunjung wajib diisi.";
     header("Location: index.php#biodata");
     exit;
   }
 
   $tanggal = date('Y-m-d', strtotime($tgl_input));
 
-  $sql = "INSERT INTO tbl_julio
-    (NIM, Nama_Lengkap, Tempat_Lahir, Tanggal_Lahir, Hobi, Pasangan, Pekerjaan, Nama_Ortu, Nama_Kakak, Nama_Adik)
+  $sql = "INSERT INTO tbl_shirens
+    (kode_pengunjung, nama_pengunjung, alamat_rumah, tanggal_kunjungan, hobi, asal_slta, pekerjaan, nama_ortu, nama_pacar, nama_mantan)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     ON DUPLICATE KEY UPDATE
-      Nama_Lengkap = VALUES(Nama_Lengkap),
-      Tempat_Lahir = VALUES(Tempat_Lahir),
-      Tanggal_Lahir = VALUES(Tanggal_Lahir),
-      Hobi = VALUES(Hobi),
-      Pasangan = VALUES(Pasangan),
-      Pekerjaan = VALUES(Pekerjaan),
-      Nama_Ortu = VALUES(Nama_Ortu),
-      Nama_Kakak = VALUES(Nama_Kakak),
-      Nama_Adik = VALUES(Nama_Adik)";
+      nama_pengunjung = VALUES(nama_pengunjung),
+      alamat_rumah = VALUES(alamat_rumah),
+      tanggal_kunjungan = VALUES(tanggal_kunjungan),
+      hobi = VALUES(hobi),
+      asal_slta = VALUES(asal_slta),
+      pekerjaan = VALUES(pekerjaan),
+      nama_ortu = VALUES(nama_ortu),
+      nama_pacar = VALUES(nama_pacar),
+      nama_mantan = VALUES(nama_mantan)";
 
   $stmt = mysqli_prepare($conn, $sql);
 
   mysqli_stmt_bind_param(
     $stmt,
     "ssssssssss",
-    $nim,
+    $kode,
     $nama,
-    $tempat,
+    $alamat,
     $tanggal,
     $hobi,
-    $pasangan,
+    $asal,
     $pekerjaan,
     $ortu,
-    $kakak,
-    $adik
+    $pacar,
+    $mantan
   );
 
   if (!mysqli_stmt_execute($stmt)) {
@@ -63,43 +63,5 @@ if (isset($_POST['txtNim'])) {
 
   $_SESSION['flash_biodata'] = "Biodata berhasil disimpan.";
   header("Location: index.php#biodata");
-  exit;
-}
-
-if (isset($_POST['txtNama'])) {
-
-  $nama    = bersihkan($_POST['txtNama'] ?? '');
-  $email   = bersihkan($_POST['txtEmail'] ?? '');
-  $pesan   = bersihkan($_POST['txtPesan'] ?? '');
-  $captcha = bersihkan($_POST['txtCaptcha'] ?? '');
-
-  $errors = [];
-
-  if ($nama === '')  $errors[] = "Nama wajib diisi.";
-  if ($email === '') $errors[] = "Email wajib diisi.";
-  if ($pesan === '') $errors[] = "Pesan wajib diisi.";
-  if ($captcha != '5') $errors[] = "Captcha salah.";
-
-  if ($errors) {
-    $_SESSION['flash_contact_error'] = implode('<br>', $errors);
-    header("Location: index.php#contact");
-    exit;
-  }
-
-  $stmt = mysqli_prepare(
-    $conn,
-    "INSERT INTO tbl_tamu (cnama, cemail, cpesan) VALUES (?, ?, ?)"
-  );
-
-  mysqli_stmt_bind_param($stmt, "sss", $nama, $email, $pesan);
-
-  if (!mysqli_stmt_execute($stmt)) {
-    die("SQL ERROR KONTAK: " . mysqli_error($conn));
-  }
-
-  mysqli_stmt_close($stmt);
-
-  $_SESSION['flash_contact'] = "Pesan berhasil dikirim.";
-  header("Location: index.php#contact");
   exit;
 }

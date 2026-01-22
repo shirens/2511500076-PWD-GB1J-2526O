@@ -40,7 +40,7 @@ require_once __DIR__ . '/fungsi.php';
 
     <section id="biodata">
       <h2>Biodata Pengunjung</h2>
-      <form action="proses.php" method="POST">
+      <form action="proses_biodata.php" method="POST">
 
         <label for="txtKodePen"><span>Kode Pengunjung:</span>
           <input type="text" id="txtKodePen" name="txtKodePen" placeholder="Masukkan Kode Pengunjung" required>

@@ -34,16 +34,16 @@
   <tr>
     <th>ID</th>
     <th>Aksi</th>
-    <th>Nim</th>
-    <th>Nama Lengkap</th>
-    <th>Tempat Lahir</th>
-    <th>Tanggal Lahir</th>
+    <th>Kode Pengunjung</th>
+    <th>Nama Pengunjung</th>
+    <th>Alamat Rumah</th>
+    <th>Tanggal Kunjungan</th>
     <th>Hobi</th>
-    <th>Pasangan</th>
+    <th>Asal SLTA</th>
     <th>Pekerjaan</th>
     <th>Nama Ortu</th>
-    <th>Nama Kakak</th>
-    <th>Nama Adik</th>
+    <th>Nama Pacar</th>
+    <th>Nama Mantan</th>
     <th>Created At</th>
   </tr>
   <?php $i = 1; ?>
@@ -54,16 +54,16 @@
         <a href="edit.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
         <a onclick="return confirm('Hapus <?= htmlspecialchars($row['cnama']); ?>?')" href="proses_delete.php?cid=<?= (int)$row['cid']; ?>">Delete</a>
       </td>
-      <td><?= htmlspecialchars($row['nim']); ?></td>
-      <td><?= htmlspecialchars($row['nama_lengkap']); ?></td>
-      <td><?= htmlspecialchars($row['tempat_lahir']); ?></td>
-      <td><?= nl2br(htmlspecialchars($row['tanggal_lahir'])); ?></td>
+      <td><?= htmlspecialchars($row['kode_pengunjung']); ?></td>
+      <td><?= htmlspecialchars($row['nama_pengunjung']); ?></td>
+      <td><?= htmlspecialchars($row['alamat_rumah']); ?></td>
+      <td><?= nl2br(htmlspecialchars($row['tanggal_kunjungan'])); ?></td>
       <td><?= htmlspecialchars($row['hobi']); ?></td>
-      <td><?= htmlspecialchars($row['pasangan']); ?></td>
+      <td><?= htmlspecialchars($row['asal_slta']); ?></td>
       <td><?= htmlspecialchars($row['pekerjaan']); ?></td>
       <td><?= htmlspecialchars($row['nama_ortu']); ?></td>
-      <td><?= htmlspecialchars($row['nama_kakak']); ?></td>
-      <td><?= htmlspecialchars($row['nama_adik']); ?></td>
+      <td><?= htmlspecialchars($row['nama_pacar']); ?></td>
+      <td><?= htmlspecialchars($row['nama_mantan']); ?></td>
       <td><?= formatTanggal(htmlspecialchars($row['created_at'])); ?></td>
     </tr>
   <?php endwhile; ?>
