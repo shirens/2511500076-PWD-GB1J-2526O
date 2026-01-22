@@ -9,21 +9,21 @@ $cid = filter_input(INPUT_GET, 'cid', FILTER_VALIDATE_INT, [
 
 if (!$cid) {
   $_SESSION['flash_error'] = 'Akses tidak valid.';
-  redirect_ke('julio.php');
+  redirect_ke('shirens.php');
 }
 
 $stmt = mysqli_prepare($conn, "
   SELECT 
-    cid, NIM, Nama_Lengkap, Tempat_Lahir, Tanggal_Lahir,
-    Hobi, Pasangan, Pekerjaan,
-    Nama_Ortu, Nama_Kakak, Nama_Adik
-  FROM tbl_julio
+    cid, kode_pengunjung, Nama_pengunjung, alamat_rumah, tanggal_kunjungan,
+    hobi, asal_slta, pekerjaan,
+    nama_ortu, nama_pacar, nama_mantan
+  FROM tbl_shirens
   WHERE cid = ? LIMIT 1
 ");
 
 if (!$stmt) {
   $_SESSION['flash_error'] = 'Query tidak benar.';
-  redirect_ke('julio.php');
+  redirect_ke('shirens.php');
 }
 
 mysqli_stmt_bind_param($stmt, "i", $cid);
@@ -34,19 +34,19 @@ mysqli_stmt_close($stmt);
 
 if (!$row) {
   $_SESSION['flash_error'] = 'Data tidak ditemukan.';
-  redirect_ke('julio.php');
+  redirect_ke('shirens.php');
 }
 
-$nim        = $row['NIM'] ?? '';
-$nama       = $row['Nama_Lengkap'] ?? '';
-$tempat     = $row['Tempat_Lahir'] ?? '';
-$tanggal    = $row['Tanggal_Lahir'] ?? '';
-$hobi       = $row['Hobi'] ?? '';
-$pasangan   = $row['Pasangan'] ?? '';
-$pekerjaan  = $row['Pekerjaan'] ?? '';
-$ortu       = $row['Nama_Ortu'] ?? '';
-$kakak      = $row['Nama_Kakak'] ?? '';
-$adik       = $row['Nama_Adik'] ?? '';
+$kode       = $row['kode_pengunjung'] ?? '';
+$nama       = $row['Nama_pengunjung'] ?? '';
+$alamat     = $row['alamat_rumah'] ?? '';
+$tanggal    = $row['tanggal_kunjungan'] ?? '';
+$hobi       = $row['hobi'] ?? '';
+$asal   = $row['asal_slta'] ?? '';
+$pekerjaan  = $row['pekerjaan'] ?? '';
+$ortu       = $row['nama_ortu'] ?? '';
+$pacar      = $row['nama_pacar'] ?? '';
+$mantan       = $row['nama_mantan'] ?? '';
 
 $flash_error = $_SESSION['flash_error'] ?? '';
 unset($_SESSION['flash_error']);
@@ -82,58 +82,58 @@ unset($_SESSION['flash_error']);
     <input type="hidden" name="cid" value="<?= (int)$cid ?>">
 
     <label>
-      <span>NIM</span>
-      <input type="text" name="NIM" value="<?= htmlspecialchars($nim) ?>" required>
+      <span>Kode Pengunjung</span>
+      <input type="text" name="kode_pengunjung" value="<?= htmlspecialchars($nim) ?>" required>
     </label>
 
     <label>
-      <span>Nama Lengkap</span>
-      <input type="text" name="Nama_Lengkap" value="<?= htmlspecialchars($nama) ?>" required>
+      <span>Nama Pengunjung</span>
+      <input type="text" name="Nama_pengunjung" value="<?= htmlspecialchars($nama) ?>" required>
     </label>
 
     <label>
-      <span>Tempat Lahir</span>
-      <input type="text" name="Tempat_Lahir" value="<?= htmlspecialchars($tempat) ?>">
+      <span>Alamat Rumah</span>
+      <input type="text" name="alamat_rumah" value="<?= htmlspecialchars($tempat) ?>">
     </label>
 
     <label>
-      <span>Tanggal Lahir</span>
-      <input type="date" name="Tanggal_Lahir" value="<?= $tanggal ?>">
+      <span>Tanggal Kunjungan</span>
+      <input type="date" name="Tanggal_kunjungan" value="<?= $tanggal ?>">
     </label>
 
     <label>
       <span>Hobi</span>
-      <input type="text" name="Hobi" value="<?= htmlspecialchars($hobi) ?>">
+      <input type="text" name="hobi" value="<?= htmlspecialchars($hobi) ?>">
     </label>
 
     <label>
-      <span>Pasangan</span>
-      <input type="text" name="Pasangan" value="<?= htmlspecialchars($pasangan) ?>">
+      <span>Asal_SLTA</span>
+      <input type="text" name="asal_slta" value="<?= htmlspecialchars($pasangan) ?>">
     </label>
 
     <label>
       <span>Pekerjaan</span>
-      <input type="text" name="Pekerjaan" value="<?= htmlspecialchars($pekerjaan) ?>">
+      <input type="text" name="pekerjaan" value="<?= htmlspecialchars($pekerjaan) ?>">
     </label>
 
     <label>
-      <span>Nama Orang Tua</span>
-      <input type="text" name="Nama_Ortu" value="<?= htmlspecialchars($ortu) ?>">
+      <span>Nama Ortu</span>
+      <input type="text" name="nama_ortu" value="<?= htmlspecialchars($ortu) ?>">
     </label>
 
     <label>
-      <span>Nama Kakak</span>
-      <input type="text" name="Nama_Kakak" value="<?= htmlspecialchars($kakak) ?>">
+      <span>Nama Pacar</span>
+      <input type="text" name="nama_pacar" value="<?= htmlspecialchars($kakak) ?>">
     </label>
 
     <label>
-      <span>Nama Adik</span>
-      <input type="text" name="Nama_Adik" value="<?= htmlspecialchars($adik) ?>">
+      <span>Nama Mantan</span>
+      <input type="text" name="nama_mantan" value="<?= htmlspecialchars($adik) ?>">
     </label>
 
-    <button type="submit">Update</button>
-    <button type="reset">Reset</button>
-    <a href="julio.php" class="reset">Kembali</a>
+    <button type="submit">Kirim</button>
+    <button type="reset">Batal</button>
+    <a href="shirens.php" class="reset">Kembali</a>
 
   </form>
 </body>
