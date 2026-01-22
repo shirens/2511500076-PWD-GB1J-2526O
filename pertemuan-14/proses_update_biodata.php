@@ -9,38 +9,38 @@ $cid = filter_input(INPUT_POST, 'cid', FILTER_VALIDATE_INT, [
 
 if (!$cid) {
   $_SESSION['flash_error'] = 'Akses tidak valid.';
-  redirect_ke('julio.php');
+  redirect_ke('shirens.php');
 }
 
-$nim        = trim($_POST['NIM'] ?? '');
-$nama       = trim($_POST['Nama_Lengkap'] ?? '');
-$tempat     = trim($_POST['Tempat_Lahir'] ?? '');
-$tanggal    = $_POST['Tanggal_Lahir'] ?? '';
-$hobi       = trim($_POST['Hobi'] ?? '');
-$pasangan   = trim($_POST['Pasangan'] ?? '');
-$pekerjaan  = trim($_POST['Pekerjaan'] ?? '');
-$ortu       = trim($_POST['Nama_Ortu'] ?? '');
-$kakak      = trim($_POST['Nama_Kakak'] ?? '');
-$adik       = trim($_POST['Nama_Adik'] ?? '');
+$nim        = trim($_POST['nim'] ?? '');
+$nama       = trim($_POST['nama_lengkap'] ?? '');
+$tempat     = trim($_POST['tempat_lahir'] ?? '');
+$tanggal    = $_POST['tanggal_lahir'] ?? '';
+$hobi       = trim($_POST['hobi'] ?? '');
+$pasangan   = trim($_POST['pasangan'] ?? '');
+$pekerjaan  = trim($_POST['pekerjaan'] ?? '');
+$ortu       = trim($_POST['nama_ortu'] ?? '');
+$kakak      = trim($_POST['nama_kakak'] ?? '');
+$adik       = trim($_POST['nama_adik'] ?? '');
 
 $stmt = mysqli_prepare($conn, "
-  UPDATE tbl_julio SET
-    NIM = ?,
-    Nama_Lengkap = ?,
-    Tempat_Lahir = ?,
-    Tanggal_Lahir = ?,
-    Hobi = ?,
-    Pasangan = ?,
-    Pekerjaan = ?,
-    Nama_Ortu = ?,
-    Nama_Kakak = ?,
-    Nama_Adik = ?
+  UPDATE tbl_shirens SET
+'nim = ?,
+    nama_lengkap = ?,
+    tempat_lahir = ?,
+    tanggal_lahir = ?,
+    hobi = ?,
+    pasangan = ?,
+    pekerjaan = ?,
+    nama_ortu = ?,
+    nama_kakak = ?,
+    nama_adik = ?
   WHERE cid = ?
 ");
 
 if (!$stmt) {
   $_SESSION['flash_error'] = 'Query gagal disiapkan.';
-  redirect_ke('julio.php');
+  redirect_ke('shirens.php');
 }
 
 mysqli_stmt_bind_param(
@@ -67,4 +67,4 @@ if (mysqli_stmt_execute($stmt)) {
 
 mysqli_stmt_close($stmt);
 
-redirect_ke('julio.php');
+redirect_ke('shirens.php');
