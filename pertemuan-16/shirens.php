@@ -51,7 +51,8 @@
     <tr>
       <td><?= $i++ ?></td>
       <td>
-        <a href="edit_biodata.php?cid=<?= (int)$row['cid']; ?>">Edit</a>
+        <a href="edit_biodata.php?cid=<?= (int)$row['cid'] ?>">Edit</a>
+
 
         <a 
         onclick="return confirm('Hapus data <?= htmlspecialchars($row['nama_pengunjung']); ?> ?')"
