@@ -9,4 +9,5 @@ Kelompok: GB1J<br>
 Try out UAS:<br>
 <ol>
 <li>mengestrak file rar dari elearning dan copy ke pertemuan 16</li>
+<li>membuat tabel baru di phpmyadmin</li>
 </ol>
