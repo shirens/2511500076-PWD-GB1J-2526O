@@ -13,4 +13,5 @@ Melaksanakan UAS:<br>
 <li>membuat file baru shirens.php sebagai file pembaca</li>
 <li>salin file read.php ke shirens.php</li>
 <li>modifikasi file shirens.php</li>
+<li>membuat file baru proses_biodata.php</li>
 </ol>
