@@ -25,4 +25,5 @@ biodata.php</li>
 <li>merapikan semua kodingan agar terlihat rapi</li>
 <li>terakhir coba di web untuk kirim, edit dan delete database nya kalau sudah berhasil maka sudah selesai</li>
 <li>memperbaiki notif yang tidak muncul ketika ngirim biodata</li>
+<li>menambahkan tombol edit dan delete di shirens.php</li>
 </ol>
