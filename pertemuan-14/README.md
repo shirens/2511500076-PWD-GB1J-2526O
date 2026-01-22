@@ -13,4 +13,6 @@ Try out UAS:<br>
 <li>membuat file baru shirens.php untuk pembaca</li>
 <li>copy file dari read.php ke shirens.php</li>
 <li>modifikasi file shirens.php</li>
+<li>membuat fiel baru proses_biodata.php</li>
+<li>copy file proses.php ke proses_biodata.php</li>
 </ol>
