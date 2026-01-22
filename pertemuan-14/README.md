@@ -12,4 +12,5 @@ Try out UAS:<br>
 <li>membuat tabel baru di php myadmin</li>
 <li>membuat file baru shirens.php untuk pembaca</li>
 <li>copy file dari read.php ke shirens.php</li>
+<li>modifikasi file shirens.php</li>
 </ol>
