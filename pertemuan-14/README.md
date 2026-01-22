@@ -22,4 +22,5 @@ Try out UAS:<br>
 <li>modfikasi file edit_biodata.php</li>
 <li>membuat file baru proses
 _update_biodata.php</li>
+<li>copy file proses_update.php ke proses_update_biodata.php</li>
 </ol>
