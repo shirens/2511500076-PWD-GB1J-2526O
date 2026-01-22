@@ -12,4 +12,5 @@ Melaksanakan UAS:<br>
 <li>mengekstrak file rar di elearning dan copy ke pertemuan 16</li>
 <li>membuat file baru shirens.php sebagai file pembaca</li>
 <li>salin file read.php ke shirens.php</li>
+<li>modifikasi file shirens.php</li>
 </ol>
