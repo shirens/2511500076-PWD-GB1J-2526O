@@ -8,23 +8,5 @@ Kelompok: GB1J<br>
 <br>
 Try out UAS:<br>
 <ol>
-<li>mengestrak file rar dari elearning dan copy ke pertemuan 16</li>
-<li>membuat tabel baru di phpmyadmin</li>
-<li>membuat file pembaca yang baru shirens.php</li>
-<li>copy file read.php ke shirens.php</li>
-<li>modifikasi file di shirens.php</li>
-<li>membuat file proses baru proses_biodata.php</li>
-<li>copy file proses.php ke proses_biodata.php</li>
-<li>modifikasi file proses_biodata.php</li>
-<li>menambahkan tombol edit dan delete di shirens.php</li>
-<li>membuat file baru edit_biodata.php<li>
-<li>copy file edit.php ke edit_biodata.php<li>
-<li>modfikasi file edit_biodata.php</li>
-<li>membuat file baru proses
-_update_biodata.php</li>
-<li>copy file proses_update.php ke proses_update_biodata.php</li>
-<li>modifikasi file proses_update_biodata.php</li>
-<li>membuat file baru proses_delete_biodata.php</li>
-<li>copy file proses_delete.php ke proses_delete_biodata.php</li>
-<li>modifikasi file proses_delete_biodata.php</li>
+<li>mengekstrak file di elearning dan di copy ke pertemuan 16</li>
 </ol>
